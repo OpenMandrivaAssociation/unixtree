@@ -1,0 +1,24 @@
+diff -up unixtree-3.0.4/libres/resmkch.c.omv~ unixtree-3.0.4/libres/resmkch.c
+--- unixtree-3.0.4/libres/resmkch.c.omv~	2023-11-14 00:00:51.737076970 +0100
++++ unixtree-3.0.4/libres/resmkch.c	2023-11-14 00:00:55.881114583 +0100
+@@ -10,7 +10,7 @@
+ /*------------------------------------------------------------------------
+  * get list of res entries
+  */
+-static res_get_list (RES_LIST *rl, char *msgbuf)
++static int res_get_list (RES_LIST *rl, char *msgbuf)
+ {
+ 	FILE *	fp;
+ 	int		rc;
+diff -up unixtree-3.0.4/libprd/term.c.omv~ unixtree-3.0.4/libprd/term.c
+--- unixtree-3.0.4/libprd/term.c.omv~	2023-11-14 00:07:24.218662564 +0100
++++ unixtree-3.0.4/libprd/term.c	2023-11-14 00:07:29.030706755 +0100
+@@ -82,7 +82,7 @@ static int win_run (void)
+ 	XVT_DATA *	xd = gbl(xvt_data);
+ 	int			rc;
+ 
+-	sprintf(gbl(pgm_label), package_name());
++	sprintf(gbl(pgm_label), "%s", package_name());
+ 	strcat (gbl(pgm_label), msgs(m_term_label));
+ 
+ 	xvt_tk_resource(xd);
