@@ -7,6 +7,9 @@ Summary: Console-mode filemanager modeled after XTree Gold
 URL: https://github.com/unixtree/unixtree
 License: GPL-2.0
 Group: System
+BuildRequires: sed
+BuildRequires: make
+BuildRequires: pkgconfig(x11)
 
 %description
 UnixTree is a powerful and versatile console-mode filemanager for Unix-style
